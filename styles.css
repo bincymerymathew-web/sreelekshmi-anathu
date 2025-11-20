@@ -119,7 +119,25 @@ padding: 4px 10px;
 color: #735a37;
 font-size: 1.05em;
 margin-top: 5px;
+}.countdown-timer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1.2em;
+  color: #a2835e;
+  font-weight: bold;
 }
+
+.maps-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4a8cf4;
+  text-decoration: none;
+  font-weight: 600;
+}
+.maps-link:hover {
+  text-decoration: underline;
+}
+
 .time {
 display: block;
 color: #a2835e;
