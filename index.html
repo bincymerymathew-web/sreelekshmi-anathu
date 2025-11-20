@@ -2,64 +2,67 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Wedding Invitation for Sreelekshmi & Anathu</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sreelekshmi & Anathu's Wedding</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="main-card">
-<p class="intro">
-It would be our great honour to have your esteemed presence and blessings as we celebrate our big day
-<span class="bride">Sreelekshmi</span> & <span class="and-txt">and</span> <span class="groom">Anathu</span></h1>
-<div class="details-block">
-<div class="names">
-</div>
-<div class="details-section">
-<div class="date-block">
-<div class="small">JANUARY</div>
-<div class="day-row">
-<span class="weekday">WEDNESDAY</span>
-<span class="date">28</span>
-<span class="year">2026</span>
-</div>
-</div>
-<div class="venue">
-HIBAS Convention Center,<br>
-Vallikunnam, Alappuzha.<br>
-<a href="https://maps.google.com/?q=Vallikunnam,+Alappuzha" target="_blank" class="maps-link">
-📍 View on Google Maps
-</a>
-<br>
-<span class="time">Muhurtham B/w 10:00 am &amp; 10:45 am</span>
-</div>
-<!-- Countdown timer div -->
-<div id="countdown" class="countdown-timer"></div>
-</div>
-<div class="floral-bottom"></div>
-</div>
+
+<div class="invitation-container">
+
+<header class="hero-section">
+<p class="we-are-getting-married">We're Tying the Knot!</p>
+<h1 class="couple-names">Sreelekshmi <span class="ampersand">&</span> Anathu</h1>
+<p class="welcome-message">
+It would be our great honour to have your esteemed presence and blessings as we celebrate our big day.
+</p>
+</header>
+
+<section class="details-section">
+<div class="detail-card date-card">
+<i class="icon">📅</i>
+<h2>When</h2>
+<p class="main-detail">Wednesday, January 28, 2026</p>
+<p class="sub-detail">Muhurtham B/w 10:00 am & 10:45 am</p>
 </div>
 
-<!-- Countdown Timer Script -->
-<script>
-// Set your wedding date and time: (Year, Month (0-11), Day, Hour, Minute, Second)
-var eventDate = new Date(2026, 0, 28, 10, 0, 0); // Jan=0 for January, 28th, 2026, 10:00 AM
+<div class="detail-card venue-card">
+<i class="icon">📍</i>
+<h2>Where</h2>
+<p class="main-detail">HIBAS Convention Center</p>
+<p class="sub-detail">Vallikunnam, Alappuzha.</p>
+<a href="#YourActualGoogleMapsLinkHere" target="_blank" class="map-link">View on Google Maps</a>
+</div>
+</section>
 
-function updateCountdown() {
-var now = new Date();
-var distance = eventDate - now;
-if (distance < 0) {
-document.getElementById('countdown').innerHTML = "The big day has arrived!";
-return;
-}
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-var minutes = Math.floor((distance / (1000 * 60)) % 60);
-var seconds = Math.floor((distance / 1000) % 60);
-document.getElementById('countdown').innerHTML =
-`<b>Countdown:</b> ${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec left`;
-}
-setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
+<section class="countdown-section">
+<h2>The Celebration Starts In...</h2>
+<div id="countdown" class="countdown-timer">
+<div class="countdown-item">
+<span id="days" class="number">00</span>
+<span class="label">Days</span>
+</div>
+<div class="countdown-item">
+<span id="hours" class="number">00</span>
+<span class="label">Hours</span>
+</div>
+<div class="countdown-item">
+<span id="minutes" class="number">00</span>
+<span class="label">Minutes</span>
+</div>
+<div class="countdown-item">
+<span id="seconds" class="number">00</span>
+<span class="label">Seconds</span>
+</div>
+</div>
+</section>
+
+<footer>
+<p>Kindly keep us in your prayers.</p>
+</footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
