@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sreelekshmi & Anathu Wedding Invitation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Wedding Invitation for Sreelekshmi & Anathu</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="invitation-card">
-        <div class="floral-top"></div>
-        <div class="header">
-            </p>
-            <p class="invite-message">
-                It would be our great honour to have your esteemed presence and blessings, along with your family, as we celebrate our big day
-            </p>
-        </div>
-        <div class="couple-names">
-            <span class="bride">Sreelekshmi</span>
-            <span class="and">&amp;<br>and<br>&amp;</span>
-            <span class="groom">Anathu</span>
-        </div>
-        <div class="parents">
-            <span class="parents-details">
-                S/o Prasannakumar. V &amp; Radhalekshmi. S.G<br>
-                Mundappallil, Njakkana P.O, Oachira, Pin:690533
-            </span>
-        </div>
-        <div class="details-section">
-            <div class="date-block">
-                <div class="small">JANUARY</div>
-                <div class="day-row">
-                    <span class="weekday">WEDNESDAY</span>
-                    <span class="date">28</span>
-                    <span class="year">2026</span>
-                </div>
-            </div>
-            <div class="venue">
-                HIBAS Convention Center,<br>
-                Vallikunnam, Alappuzha.<br>
-                <a href=“https://maps.google.com/?q=Vallikunnam,+Alappuzha” target=“_blank” class=“maps-link”>
-    📍 View on Google Maps
+<div class="main-card">
+<p class="intro">
+It would be our great honour to have your esteemed presence and blessings as we celebrate our big day
+<h1><span class="bride">Sreelekshmi</span> & <span class="and-txt">and</span> <span class="groom">Anathu</span></h1>
+<div class="details-block">
+<div class="names">
+</div>
+<div class="details-section">
+<div class="date-block">
+<div class="small">JANUARY</div>
+<div class="day-row">
+<span class="weekday">WEDNESDAY</span>
+<span class="date">28</span>
+<span class="year">2026</span>
+</div>
+</div>
+<div class="venue">
+HIBAS Convention Center,<br>
+Vallikunnam, Alappuzha.<br>
+<a href="https://maps.google.com/?q=Vallikunnam,+Alappuzha" target="_blank" class="maps-link">
+📍 View on Google Maps
 </a>
+<br>
+<span class="time">Muhurtham B/w 10:00 am &amp; 10:45 am</span>
+</div>
+<!-- Countdown timer div -->
+<div id="countdown" class="countdown-timer"></div>
+</div>
+<div class="floral-bottom"></div>
+</div>
+</div>
 
-                <span class="time">Muhurtham B/w 10:00 am &amp; 10:45 am</span>
-            </div>
-        </div>
-    <div id=“countdown” class=“countdown-timer”></div>
+<!-- Countdown Timer Script -->
 <script>
-  // Set the date and time of the wedding
-  var eventDate = new Date(2026, 0, 28, 10, 0, 0); // Jan=0, so Jan 28, 2026 at 10:00 AM
-  function updateCountdown() {
-    var now = new Date();
-    var distance = eventDate - now;
-    if (distance < 0) {
-      document.getElementById(‘countdown’).innerHTML = “The big day has arrived!”;
-      return;
-    }
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    var minutes = Math.floor((distance / (1000 * 60)) % 60);
-    var seconds = Math.floor((distance / 1000) % 60);
+// Set your wedding date and time: (Year, Month (0-11), Day, Hour, Minute, Second)
+var eventDate = new Date(2026, 0, 28, 10, 0, 0); // Jan=0 for January, 28th, 2026, 10:00 AM
 
-    document.getElementById(‘countdown’).innerHTML =
-      `<b>Countdown:</b> ${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec left`;
-  }
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
+function updateCountdown() {
+var now = new Date();
+var distance = eventDate - now;
+if (distance < 0) {
+document.getElementById('countdown').innerHTML = "The big day has arrived!";
+return;
+}
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+var minutes = Math.floor((distance / (1000 * 60)) % 60);
+var seconds = Math.floor((distance / 1000) % 60);
+document.getElementById('countdown').innerHTML =
+`<b>Countdown:</b> ${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec left`;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
 </script>
-
-        
-        <div class="floral-bottom"></div>
-    </div>
 </body>
 </html>
