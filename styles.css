@@ -1,151 +1,150 @@
-/* --- Import Fonts (Mirrored from HTML for completeness) --- */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap');
-
-/* --- Color Variables --- */
-:root {
---primary-color: #A96D4B; /* Muted Gold/Brown for Names */
---text-color: #5D5045; /* Deep Brown for Body Text */
---accent-color: #E6B89C; /* Soft Peach/Blush for Background */
---bg-color: #FFFFFF;
-}
-
-/* --- Global Reset and Body Styling --- */
 body {
-font-family: 'Cormorant Garamond', serif;
-color: var(--text-color);
-line-height: 1.6;
 margin: 0;
 padding: 0;
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: var(--bg-color);
-/* Subtle background treatment */
-background-image: linear-gradient(to top, var(--accent-color) 0%, transparent 100%);
-background-size: cover;
-background-position: center;
+background: #f9f8f6;
+font-family: 'Quicksand', Arial, sans-serif;
+}
+.invitation-card {
+background: linear-gradient(160deg, #fff8ef 75%, #e5f0eb 100%);
+max-width: 500px;
+margin: 30px auto 30px auto;
+border-radius: 18px;
+box-shadow: 0 2px 18px rgba(178, 164, 154, 0.14), 0 1.5px 0 #e9cfc8;
+padding: 20px 24px 30px 24px;
+position: relative;
+overflow: hidden;
+border: 3px solid #dcc69c;
 }
 
-.invitation-container {
+.floral-top, .floral-bottom {
 width: 100%;
-max-width: 500px;
-padding: 50px 30px;
-margin: 20px;
-background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-border-radius: 10px;
+height: 60px;
+background: url('https://raw.githubusercontent.com/lonekorean/gist-images/master/flowers/flowers-top.png') no-repeat center/contain;
+}
+
+.floral-bottom {
+background: url('https://raw.githubusercontent.com/lonekorean/gist-images/master/flowers/flowers-bottom.png') no-repeat center/contain;
+height: 80px;
+margin-bottom: -32px;
+}
+.header {
+text-align: center;
+margin-top: 12px;
+}
+.family-details {
+font-size: 1em;
+color: #6d533c;
+margin-bottom: 10px;
+}
+.invite-message {
+margin-bottom: 18px;
+color: #997d5a;
+font-size: 1.1em;
+font-style: italic;
+margin-left: 10px;
+margin-right: 10px;
+}
+.couple-names {
+text-align: center;
+margin: 20px 0 10px 0;
+}
+.bride, .groom {
+font-family: 'Great Vibes', cursive;
+font-size: 2.7em;
+color: #d3aa64;
+letter-spacing: 1px;
+display: inline-block;
+margin: 0 8px;
+}
+.and {
+font-family: 'Quicksand', sans-serif;
+color: #b9a177;
+font-weight: 700;
+line-height: 1;
+font-size: 1.2em;
+display: inline-block;
+margin: 0 4px;
+}
+.parents {
+margin-bottom: 8px;
 text-align: center;
 }
-
-/* --- Header / Hero Section --- */
-.welcome-message {
-font-size: 1.1em;
-margin-bottom: 30px;
-padding: 0 10px;
+.parents-details {
+font-size: 1em;
+color: #644821;
 }
-
-.couple-names {
-font-family: 'Great Vibes', cursive;
-font-size: 4.5em;
-color: var(--primary-color);
-line-height: 0.9;
-margin-bottom: 5px;
-display: block;
-}
-
-.ampersand {
-font-size: 0.5em;
-vertical-align: middle;
-color: var(--text-color);
-font-family: 'Cormorant Garamond', serif;
-display: block;
-margin: 10px 0;
-}
-
-/* --- Details Section --- */
 .details-section {
-border-top: 1px solid var(--accent-color);
-border-bottom: 1px solid var(--accent-color);
-padding: 20px 0;
-margin: 30px 0;
+text-align: center;
+margin: 22px 0;
 }
-
-.date-box {
+.date-block {
+margin-bottom: 10px;
+}
+.small {
+font-size: 1.1em;
+color: #a2835e;
+font-weight: 700;
+letter-spacing: 2px;
+}
+.day-row {
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 15px;
-font-size: 1.2em;
-margin-bottom: 20px;
-color: var(--text-color);
-text-transform: uppercase;
 }
-
-.day-name {
-font-weight: 400;
+.weekday {
+background: #f4ebd6;
+font-size: 0.95em;
+color: #b3946d;
+border-radius: 8px 0 0 8px;
+padding: 4px 10px;
 }
-
-.day-number {
-font-size: 3em;
-font-weight: 600;
-color: var(--primary-color);
-line-height: 1;
+.date {
+font-size: 2.1em;
+font-weight: 700;
+color: #a2835e;
+background: #fffbe8;
+padding: 0 16px;
+border-radius: 0 0 14px 14px;
+margin: 0 6px;
+font-family: 'Quicksand', sans-serif;
 }
-
-.time-location {
-font-size: 1.1em;
-margin-top: 15px;
-}
-
-.note {
-margin-top: 15px;
-font-size: 0.9em;
-font-style: italic;
-color: #888;
-}
-
-/* --- Location Link (Button Style) --- */
-.location-link {
-display: inline-block;
-margin-top: 25px;
-padding: 10px 20px;
-color: var(--primary-color);
-text-decoration: none;
-border: 1px solid var(--primary-color);
-border-radius: 5px;
-transition: all 0.3s ease;
-font-weight: 600;
-letter-spacing: 1px;
-text-transform: uppercase;
-}
-
-.location-link:hover {
-background-color: var(--primary-color);
-color: white;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Footer --- */
-footer {
-margin-top: 40px;
-font-size: 0.9em;
-color: #888;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 400px) {
-.couple-names {
-font-size: 3.5em;
-}
-.invitation-container {
-padding: 30px 15px;
-}
-.date-box {
+.year {
 font-size: 1em;
+color: #b3946d;
+background: #f4ebd6;
+border-radius: 0 8px 8px 0;
+padding: 4px 10px;
 }
-.day-number {
-font-size: 2.5em;
+.venue {
+color: #735a37;
+font-size: 1.05em;
+margin-top: 5px;
 }
+.time {
+display: block;
+color: #a2835e;
+font-size: 1em;
+margin-top: 4px;
+font-style: italic;
+}
+.compliments {
+margin-top: 26px;
+text-align: right;
+color: #b1946c;
+font-size: 1.1em;
+font-style: italic;
 }
 
+@media (max-width: 600px) {
+.invitation-card {
+max-width: 99vw;
+padding: 10px 2vw 18px 2vw;
+}
+.couple-names .bride, .couple-names .groom {
+font-size: 2em;
+}
+.date {
+font-size: 1.4em;
+padding: 0 7px;
+}
+}
