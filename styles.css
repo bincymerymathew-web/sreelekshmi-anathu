@@ -48,40 +48,11 @@ margin-right: 10px;
 text-align: center;
 margin: 20px 0 10px 0;
 }
-.bride, .groom {
-font-family: 'Great Vibes', cursive;
-font-size: 2.7em;
-color: #d3aa64;
-letter-spacing: 1px;
-display: inline-block;
-margin: 0 8px;
-}
-.and {
-font-family: 'Quicksand', sans-serif;
-color: #b9a177;
-font-weight: 700;
-line-height: 1;
-font-size: 1.2em;
-display: inline-block;
-margin: 0 4px;
-}
-.parents {
-margin-bottom: 8px;
-text-align: center;
-}
-.parents-details {
-font-size: 1em;
-color: #644821;
-}
-.details-section {
-text-align: center;
-margin: 22px 0;
-}
 .date-block {
-margin-bottom: 10px;
+margin-bottom: 12px;
 }
 .small {
-font-size: 1.1em;
+font-size: 1.8em;
 color: #a2835e;
 font-weight: 700;
 letter-spacing: 2px;
@@ -99,7 +70,7 @@ border-radius: 8px 0 0 8px;
 padding: 4px 10px;
 }
 .date {
-font-size: 2.1em;
+font-size: 1.1em;
 font-weight: 700;
 color: #a2835e;
 background: #fffbe8;
@@ -121,15 +92,15 @@ font-size: 1.05em;
 margin-top: 5px;
 }.countdown-timer {
   text-align: center;
-  margin-top: 18px;
-  font-size: 1.2em;
+  margin-top: 20px;
+  font-size: 2.2em;
   color: #a2835e;
   font-weight: bold;
 }
 
 .maps-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   color: #4a8cf4;
   text-decoration: none;
   font-weight: 600;
@@ -145,13 +116,7 @@ font-size: 1em;
 margin-top: 4px;
 font-style: italic;
 }
-.compliments {
-margin-top: 26px;
-text-align: right;
-color: #b1946c;
-font-size: 1.1em;
-font-style: italic;
-}
+
 
 @media (max-width: 600px) {
 .invitation-card {
