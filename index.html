@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sreelekshmi & Anathu – Wedding Invitation</title>
-
-<link rel="stylesheet" href="style.css" />
-
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - Sreelekshmi & Ananthu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div class="card">
+    <div class="invitation-card">
+        
+        <div class="header-text">
+            <p>Mr. & Mrs. [Host Name Initial 1]</p>
+            <p>Mr. & Mrs. [Host Name Initial 2]</p>
+        </div>
 
-    <p class="intro">
-        It would be our great honour to have your esteemed presence and blessings,
-        along with your family, as we celebrate our big day
-    </p>
+        <div class="invitation-body">
+            <p class="intro-text">
+                It would be our great honour to have your esteemed presence and blessings, along with your family, as we celebrate the marriage of our beloved daughter
+            </p>
 
-    <div class="names">Sreelekshmi</div>
-    <div class="and">and</div>
-    <div class="names">Anathu</div>
+            <h1 class="couple-names">
+                Sreelekshmi
+                <span class="and-separator">and</span>
+                Ananthu
+            </h1>
 
-    <div class="date-box">
-        <strong>JANUARY 28, 2026</strong><br>
-        Wednesday<br>
-        Muhurtham: <em>Between 10:00 am & 10:45 am</em>
+             <div class="parent-names">
+                <p>Daughter of [Parents' Names]</p>
+                <p>Son of [Parents' Names]</p>
+            </div>
+
+            <hr class="divider">
+
+            <div class="date-section">
+                <p class="month">JANUARY</p>
+                <div class="main-date">
+                    <span class="day-name">WEDNESDAY</span>
+                    <span class="day-number">28</span>
+                    <span class="year">2026</span>
+                </div>
+            </div>
+
+            <div class="countdown-container">
+                <p class="countdown-title">Countdown to the Big Day</p>
+                <div id="timer">
+                    <div class="time-box"><span id="days">00</span>Days</div>
+                    <div class="time-box"><span id="hours">00</span>Hours</div>
+                    <div class="time-box"><span id="minutes">00</span>Mins</div>
+                    <div class="time-box"><span id="seconds">00</span>Secs</div>
+                </div>
+            </div>
+
+            <div class="venue-details">
+                <p class="venue-name">HIBAS Convention Center,</p>
+                <p class="venue-location">Vallikunnam, Alappuzha.</p>
+                <p class="muhurtham">Muhurtham B/w 10:00 am & 10:45 am</p>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.916299447275!2d76.53131757491825!3d9.152142290914257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06058070b2f971%3A0x6d489c91424968b!2sHIBAS%20Convention%20Centre!5e0!3m2!1sen!2sin!4v1715694000000!5m2!1sen!2sin" 
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="footer-compliments">
+                <p>Best compliments from: [Family Name]</p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="venue">
-        HIBAS Convention Center<br>
-        Vallikunnam, Alappuzha
-    </div>
-
-    <a class="map-link" 
-       href="https://maps.google.com/?q=HIBAS+Convention+Center,+Vallikunnam,+Alappuzha"
-       target="_blank">View Location on Map 📍</a>
-
-    <div id="countdown">Loading countdown…</div>
-
-    <div class="celebrate">We look forward to celebrating with you!</div>
-
-</div>
-
-<script>
-    // COUNTDOWN SCRIPT
-    const weddingDate = new Date("January 28, 2026 10:00:00").getTime();
-
-    setInterval(() => {
-        const now = new Date().getTime();
-        const diff = weddingDate - now;
-
-        if (diff <= 0) {
-            document.getElementById("countdown").textContent = "The big day is here!";
-            return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").textContent =
-            `Countdown: ${days} days, ${hours} hrs, ${mins} min, ${secs} sec left`;
-    }, 1000);
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
