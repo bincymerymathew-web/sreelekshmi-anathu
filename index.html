@@ -1,92 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sreelekshmi & Anathu Wedding Invitation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="styles.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sreelekshmi & Anathu – Wedding Invitation</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<div class="invitation-card">
-<div class="floral-top"></div>
-<div class="header">
-</p>
-<p class="invite-message">
-It would be our great honour to have your esteemed presence and blessings, along with your family, as we celebrate our big day
-</p>
-</div>
-<div class="couple-names">
-<span class="bride">Sreelekshmi</span>
-<span class="and">&amp;<br>and<br>&amp;</span>
-<span class="groom">Anathu</span>
-</div>
-<div class="parents">
-<span class="parents-details">
-</div>
-<div class="details-section">
-<div class="date-block">
-<div class="small">JANUARY</div>
-<div class="day-row">
-<span class="weekday">WEDNESDAY</span>
-<span class="date">28</span>
-<span class="year">2026</span>
-</div>
-</div>
-<div class="venue">
-HIBAS Convention Center,<br>
-Vallikunnam, Alappuzha.<br>
-<span class="time">Muhurtham B/w 10:00 am &amp; 10:45 am</span>
-</div>
-</div>
-  </p>
 
-<a href="#YourActualGoogleMapsLinkHere" target="_blank" class="location-link">
-View Location on Map 📍
-</a>
+<div class="card">
+
+    <p class="intro">
+        It would be our great honour to have your esteemed presence and blessings,
+        along with your family, as we celebrate our big day
+    </p>
+
+    <div class="names">Sreelekshmi</div>
+    <div class="and">and</div>
+    <div class="names">Anathu</div>
+
+    <div class="date-box">
+        <strong>JANUARY 28, 2026</strong><br>
+        Wednesday<br>
+        Muhurtham: <em>Between 10:00 am & 10:45 am</em>
+    </div>
+
+    <div class="venue">
+        HIBAS Convention Center<br>
+        Vallikunnam, Alappuzha
+    </div>
+
+    <a class="map-link" 
+       href="https://maps.google.com/?q=HIBAS+Convention+Center,+Vallikunnam,+Alappuzha"
+       target="_blank">View Location on Map 📍</a>
+
+    <div id="countdown">Loading countdown…</div>
+
+    <div class="celebrate">We look forward to celebrating with you!</div>
 
 </div>
-We look forward to celebrating with you!
-</div>
 
-</body>
-</html>
-<!-- Countdown timer div -->
-<div id="countdown" class="countdown-timer"></div>
-</div>
-
-
-<!-- Countdown Timer Script -->
 <script>
-// Set your wedding date and time: (Year, Month (0-11), Day, Hour, Minute, Second)
-var eventDate = new Date(2026, 0, 28, 10, 0, 0); // Jan=0 for January, 28th, 2026, 10:00 AM
+    // COUNTDOWN SCRIPT
+    const weddingDate = new Date("January 28, 2026 10:00:00").getTime();
 
-function updateCountdown() {
-var now = new Date();
-var distance = eventDate - now;
-if (distance < 0) {
-document.getElementById('countdown').innerHTML = "The big day has arrived!";
-return;
-}
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-var minutes = Math.floor((distance / (1000 * 60)) % 60);
-var seconds = Math.floor((distance / 1000) % 60);
-document.getElementById('countdown').innerHTML =
-`<b>Countdown:</b> ${days} days, ${hours} hrs, ${minutes} min, ${seconds} sec left`;
-}
-setInterval(updateCountdown, 1000);
-updateCountdown();
+    setInterval(() => {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+            document.getElementById("countdown").textContent = "The big day is here!";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").textContent =
+            `Countdown: ${days} days, ${hours} hrs, ${mins} min, ${secs} sec left`;
+    }, 1000);
 </script>
+
 </body>
 </html>
-
-
-<p class=</p>
-<div class="floral-bottom"></div>
-</div>
-</div>
-</body>
-</html>
-
-
