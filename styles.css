@@ -113,6 +113,15 @@ body {
   margin: 0.3rem 0;
 }
 
+/* New map container styling */
+.map-container {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Countdown styling */
 .countdown {
   margin-top: 2.5rem;
   background: #fdf9f2;
