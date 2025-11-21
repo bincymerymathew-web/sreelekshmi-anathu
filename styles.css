@@ -1,150 +1,76 @@
 body {
-margin: 0;
-padding: 0;
-background: #f9f8f6;
-font-family: 'Quicksand', Arial, sans-serif;
-}
-.invitation-card {
-background: linear-gradient(160deg, #fff8ef 75%, #e5f0eb 100%);
-max-width: 500px;
-margin: 30px auto 30px auto;
-border-radius: 18px;
-box-shadow: 0 2px 18px rgba(178, 164, 154, 0.14), 0 1.5px 0 #e9cfc8;
-padding: 20px 24px 30px 24px;
-position: relative;
-overflow: hidden;
-border: 3px solid #dcc69c;
+    margin: 0;
+    padding: 0;
+    background: #f8f4ef;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-.floral-top, .floral-bottom {
-width: 100%;
-height: 60px;
-background: url('https://raw.githubusercontent.com/lonekorean/gist-images/master/flowers/flowers-top.png') no-repeat center/contain;
+.card {
+    background: #fffdf8;
+    width: 90%;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 35px 25px;
+    border-radius: 20px;
+    border: 2px solid #e5d7c6;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-.floral-bottom {
-background: url('https://raw.githubusercontent.com/lonekorean/gist-images/master/flowers/flowers-bottom.png') no-repeat center/contain;
-height: 80px;
-margin-bottom: -32px;
+.intro {
+    color: #6f645e;
+    font-size: 16px;
+    line-height: 1.5;
 }
-.header {
-text-align: center;
-margin-top: 12px;
+
+.names {
+    font-family: "Lora";
+    font-size: 32px;
+    color: #b08a55;
+    margin: 20px 0 0 0;
 }
-.family-details {
-font-size: 1em;
-color: #6d533c;
-margin-bottom: 10px;
-}
-.invite-message {
-margin-bottom: 18px;
-color: #997d5a;
-font-size: 1.1em;
-font-style: italic;
-margin-left: 10px;
-margin-right: 10px;
-}
-.couple-names {
-text-align: center;
-margin: 20px 0 10px 0;
-}
-.bride, .groom {
-font-family: 'Great Vibes', cursive;
-font-size: 2.7em;
-color: #d3aa64;
-letter-spacing: 1px;
-display: inline-block;
-margin: 0 8px;
-}
+
 .and {
-font-family: 'Quicksand', sans-serif;
-color: #b9a177;
-font-weight: 700;
-line-height: 1;
-font-size: 1.2em;
-display: inline-block;
-margin: 0 4px;
-}
-.parents {
-margin-bottom: 8px;
-text-align: center;
-}
-.parents-details {
-font-size: 1em;
-color: #644821;
-}
-.details-section {
-text-align: center;
-margin: 22px 0;
-}
-.date-block {
-margin-bottom: 10px;
-}
-.small {
-font-size: 1.1em;
-color: #a2835e;
-font-weight: 700;
-letter-spacing: 2px;
-}
-.day-row {
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.weekday {
-background: #f4ebd6;
-font-size: 0.95em;
-color: #b3946d;
-border-radius: 8px 0 0 8px;
-padding: 4px 10px;
-}
-.date {
-font-size: 2.1em;
-font-weight: 700;
-color: #a2835e;
-background: #fffbe8;
-padding: 0 16px;
-border-radius: 0 0 14px 14px;
-margin: 0 6px;
-font-family: 'Quicksand', sans-serif;
-}
-.year {
-font-size: 1em;
-color: #b3946d;
-background: #f4ebd6;
-border-radius: 0 8px 8px 0;
-padding: 4px 10px;
-}
-.venue {
-color: #735a37;
-font-size: 1.05em;
-margin-top: 5px;
-}
-.time {
-display: block;
-color: #a2835e;
-font-size: 1em;
-margin-top: 4px;
-font-style: italic;
-}
-.countdown {
-margin-top: 26px;
-text-align: right;
-color: #d3aa64;
-font-size: 1.1em;
-font-style: italic;
+    font-size: 15px;
+    color: #6f645e;
+    margin: -8px 0 -5px 0;
 }
 
-@media (max-width: 600px) {
-.invitation-card {
-max-width: 99vw;
-padding: 10px 2vw 18px 2vw;
+.date-box {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6f645e;
 }
-.couple-names .bride, .couple-names .groom {
-font-size: 2em;
+
+.venue {
+    margin-top: 18px;
+    font-size: 16px;
+    color: #6f645e;
+    line-height: 1.5;
 }
-.date {
-font-size: 1.4em;
-padding: 0 7px;
+
+.map-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 15px;
+    text-decoration: underline;
+    color: #0066cc;
 }
+
+#countdown {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #b08a55;
+}
+
+.celebrate {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #6f645e;
 }
