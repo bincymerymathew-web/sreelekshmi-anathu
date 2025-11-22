@@ -1,73 +1,53 @@
-<!-- invitation.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wedding Invitation - Sreelekshmi & Ananthu</title>
-    <link rel="stylesheet" href="invitation.css" />
-</head>
-<body>
-    <div class="invitation-container">
-        <div class="header-text">
-            <p>It would be our great honour to have your esteemed presence and blessings, along with your family, as we celebrate the marriage of our beloved daughter</p>
-        </div>
-        <h1 class="bride-groom-names">
-            Sreelekshmi <span class="and-text">and</span> Ananthu
-        </h1>
-        <div class="date-section">
-            <div class="weekday">WEDNESDAY</div>
-            <div class="month-year">
-                <span class="month">JANUARY</span>
-                <span class="date">28</span>
-                <span class="year">2026</span>
-            </div>
-        </div>
-
-        <div class="venue-section">
-            <p>HIBAS Convention Center, Vallikunnam, Alappuzha.</p>
-            <div id="map-pin">
-                <a href="https://maps.app.goo.gl/srNmXtCH1z3Vttbr8?g_st=ipc" target="_blank" title="View Venue Location">
-                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Pin" />
-                </a>
-            </div>
-            <p class="muhurtham">Muhurtham B/w 10:00 am &amp; 10:45 am</p>
-        </div>
-
-        <div id="countdown-container">
-            <h2>Countdown to Wedding</h2>
-            <div id="countdown">
-                <span id="days"></span> Days 
-                <span id="hours"></span> Hours 
-                <span id="minutes"></span> Minutes 
-                <span id="seconds"></span> Seconds
-            </div>
-        </div>
+    <div class="date-section">
+        <span class="month">JANUARY</span>
+        <span class="day">28</span>
+        <span class="year">2026</span>
     </div>
+    <div class="weekday">WEDNESDAY</div>
+    <p class="venue">HIBAS Convention Center, Vallikunnam, Alappuzha.<br /> Muhurtham B/w 10:00 am &amp; 10:45 am</p>
 
-    <script>
-        const countDownDate = new Date("January 28, 2026 10:00:00").getTime();
+    <div id="countdown"></div>
 
-        const countdownFunction = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
+    <!-- Google Map Embed -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.795214366434!2d76.45468721463618!3d9.278328492979746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05c499bac3f01d%3A0xfe028aacf0503ee7!2sHIBAS%20Convention%20Center!5e0!3m2!1sen!2sin!4v1701123456789!5m2!1sen!2sin" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+<script>
+    // Countdown script
+    const countdownElement = document.getElementById('countdown');
+    const eventDate = new Date('January 28, 2026 10:00:00').getTime();
 
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "The wedding day has arrived!";
-                return;
-            }
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (distance < 0) {
+            countdownElement.innerHTML = 'The day has arrived!';
+            return;
+        }
 
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
-        }, 1000);
-    </script>
-</body>
-</html>
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML =
+            `<div class="countdown-label">Countdown to Our Big Day</div>
+            <div class="countdown-timer">
+                <span>${days}d</span>
+                <span>${hours}h</span>
+                <span>${minutes}m</span>
+                <span>${seconds}s</span>
+            </div>`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
