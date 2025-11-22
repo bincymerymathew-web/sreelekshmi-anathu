@@ -1,10 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formal Wedding Invitation</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Floral Wedding Invitation</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body {
+    margin: 0;
+    background: #f9f7f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-image:
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .invitation-card {
+    background: #fffefa;
+    max-width: 420px;
+    border-radius: 20px;
+    padding: 2.8rem 2rem 3.2rem 2rem;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    text-align: center;
+    position: relative;
+    color: #8a6f53;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  /* Floral corners */
+  .invitation-card::before,
+  .invitation-card::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+  }
+  .invitation-card::before {
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url('https://i.postimg.cc/TYxxvP2q/floral-bottom-left.png');
+  }
+  .invitation-card::after {
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    background-image: url('https://i.postimg.cc/sXptKNMr/floral-top-right.png');
+  }
+
+  .invite-text-top p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+    color: #8a6f53;
+  }
+
+  .bride-groom-names {
+    font-family: 'Sacramento', cursive, serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 0 0 1.2rem 0;
+    color: #c9985c;
+    position: relative;
+    z-index: 1;
+  }
+
+  .and-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #8a6f53;
+    vertical-align: middle;
+    margin: 0 0.75rem;
+  }
+
+  .date-section {
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    margin: 1.5rem 0 2rem 0;
+    color: #8a6f53;
+    text-transform: uppercase;
+  }
+
+  .date-day {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .day,
+  .year {
+    border-bottom: 1px solid #c9b38f;
+    padding-bottom: 0.13rem;
+    min-width: 85px;
+  }
+
+  .day {
+    font-size: 0.9rem;
+  }
+
+  .year {
+    font-size: 0.85rem;
+  }
+
+  .date {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.025em;
+    color: #9f7f45;
+    min-width: 65px;
+    line-height: 1;
+  }
+
+  .location {
+    font-size: 1rem;
+    margin-top: 1.25rem;
+    color: #8a6f53;
+    font-weight: 500;
+    user-select: text;
+  }
+
+  .location p:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+
+  .map-container {
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+  }
+
+  .countdown {
+    margin-top: 2.8rem;
+    background: #f7f3e8;
+    border-radius: 12px;
+    padding: 1.2rem 1.8rem;
+    box-shadow: inset 0 0 12px #d8c2a3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a87e43;
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .countdown h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.95rem;
+    color: #c9985c;
+    margin: 0 0 1rem 0;
+  }
+
+  #countdown-timer {
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    color: #926c28;
+  }
+
+  #countdown-timer span {
+    background: #e5d1a5;
+    padding: 0.2rem 0.7rem;
+    margin: 0 0.4rem;
+    border-radius: 5px;
+    min-width: 42px;
+    display: inline-block;
+  }
+
+  @media (max-width: 480px) {
+    .invitation-card {
+      max-width: 340px;
+      padding: 2rem 1.5rem 2.8rem 1.5rem;
+      font-size: 14px;
+    }
+    .bride-groom-names {
+      font-size: 2.8rem;
+    }
+    .date {
+      font-size: 2.3rem;
+    }
+    .countdown h2 {
+      font-size: 1.4rem;
+    }
+    #countdown-timer {
+      font-size: 1.1rem;
+    }
+  }
+</style>
 </head>
 <body>
   <div class="invitation-card">
@@ -12,7 +206,9 @@
       <p>It would be our great honour to have your esteemed presence and blessings, along with your family, as we celebrate the marriage of our beloved daughter</p>
     </div>
 
-    <h1 class="bride-groom-names">Sreelekshmi <span class="and-text">and</span> Ananthu</h1>
+    <h1 class="bride-groom-names">
+      Sreelekshmi <span class="and-text">and</span> Ananthu
+    </h1>
 
     <div class="date-section">
       <span class="month">JANUARY</span>
@@ -23,24 +219,25 @@
       </div>
     </div>
 
-    <div class="location">
+    <div class="location" aria-label="Venue details">
       <p>HIBAS Convention Center,<br />Vallikunnam, Alappuzha.</p>
       <p>Muhurtham B/w 10:00 am &amp; 10:45 am</p>
     </div>
 
     <div class="map-container">
       <iframe
-        src="https://maps.app.goo.gl/srNmXtCH1z3Vttbr8?g_st=ipc"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.041390536857!2d76.51297471524543!3d9.298540190710709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b068fa62836bd2f%3A0x44f792c2f0c31f4f!2sHIBAS%20Convention%20Center!5e0!3m2!1sen!2sin!4v1714600000000!5m2!1sen!2sin"
         width="100%"
-        height="220"
+        height="230"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map of HIBAS Convention Center, Vallikunnam, Alappuzha"
       ></iframe>
     </div>
 
-    <div class="countdown">
+    <div class="countdown" role="timer" aria-live="polite" aria-atomic="true">
       <h2>Countdown to Celebration</h2>
       <div id="countdown-timer">
         <span id="days">00</span> Days
@@ -51,35 +248,36 @@
     </div>
   </div>
 
-  <script>
-    const targetDate = new Date("January 28, 2026 10:00:00").getTime();
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minutesEl = document.getElementById("minutes");
-    const secondsEl = document.getElementById("seconds");
+<script>
+  const targetDate = new Date("January 28, 2026 10:00:00").getTime();
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-      if (distance < 0) {
-        daysEl.textContent = "00";
-        hoursEl.textContent = "00";
-        minutesEl.textContent = "00";
-        secondsEl.textContent = "00";
-        clearInterval(countdownInterval);
-        return;
-      }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      daysEl.textContent = days.toString().padStart(2, "0");
-      hoursEl.textContent = hours.toString().padStart(2, "0");
-      minutesEl.textContent = minutes.toString().padStart(2, "0");
-      secondsEl.textContent = seconds.toString().padStart(2, "0");
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    if (distance < 0) {
+      daysEl.textContent = "00";
+      hoursEl.textContent = "00";
+      minutesEl.textContent = "00";
+      secondsEl.textContent = "00";
+      clearInterval(countdownInterval);
+      return;
     }
-    const countdownInterval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    daysEl.textContent = days.toString().padStart(2, "0");
+    hoursEl.textContent = hours.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
+  }
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
 </body>
 </html>
