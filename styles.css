@@ -1,147 +1,112 @@
-/* invitation.css */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Great+Vibes&display=swap');
 
 body {
     margin: 0;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    background: #f4f6f3;
-    color: #6e5a48;
+    padding: 1.5rem;
+    background: #f7f8f3 url('https://i.imgur.com/VqQqcsn.png') no-repeat center bottom;
+    background-size: cover;
+    font-family: 'Cormorant Garamond', serif;
+    color: #564033;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-.invitation-container {
-    background: #faf9f5 url('https://i.ibb.co/BKC4Xkb/floral-corner-top-right.png') no-repeat top right,
-                #faf9f5 url('https://i.ibb.co/b1403Vy/floral-corner-bottom-left.png') no-repeat bottom left;
-    background-size: 180px 180px;
-    box-shadow: 0 8px 25px rgba(110, 90, 72, 0.15);
-    border-radius: 20px;
-    max-width: 440px;
-    padding: 50px 35px 50px 35px;
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     text-align: center;
     position: relative;
 }
 
-.header-text p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    color: #8a7a6d;
-}
-
-.bride-groom-names {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.8rem;
-    color: #bf8c4d;
-    margin: 0 0 25px 0;
-    font-weight: 700;
+.hosts {
+    font-size: 0.9rem;
+    margin: 0 0 0.8rem;
     letter-spacing: 0.04em;
-}
-
-.and-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-    color: #8a7a6d;
-    padding: 0 16px;
-    vertical-align: middle;
-}
-
-.date-section {
-    font-family: 'Roboto', sans-serif;
-    color: #8a7a6d;
-    margin-bottom: 30px;
-}
-
-.weekday {
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-}
-
-.month-year {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #a18971;
-}
-
-.month, .year {
-    font-size: 1rem;
-    letter-spacing: 2px;
-}
-
-.date {
-    font-size: 3.4rem;
-    font-weight: 900;
-    color: #7c5d2a;
-    border-top: 2px solid #c8a15c;
-    border-bottom: 2px solid #c8a15c;
-    padding: 0 10px 4px 10px;
-    line-height: 1;
-}
-
-.venue-section {
-    font-size: 1rem;
-    color: #8a7a6d;
-    margin-bottom: 25px;
-    line-height: 1.4;
-    position: relative;
-}
-
-#map-pin {
-    margin: 15px 0 15px;
-}
-
-#map-pin img {
-    width: 36px;
-    vertical-align: middle;
-    cursor: pointer;
-    filter: drop-shadow(0 1px 1px rgba(110, 90, 72, 0.5));
-    transition: transform 0.25s ease;
-}
-
-#map-pin img:hover {
-    transform: scale(1.15);
-}
-
-.muhurtham {
     font-style: italic;
 }
 
-#countdown-container {
-    background: #fff;
-    border: 2px solid #c8a15c;
-    border-radius: 14px;
-    padding: 18px 25px;
-    margin-top: 35px;
-    box-shadow: inset 0 0 10px rgba(200, 161, 92, 0.2);
+.invitation-text {
+    font-size: 1rem;
+    margin: 0 0 1.4rem 0;
+    line-height: 1.5;
+    color: #8a7b70;
 }
 
-#countdown-container h2 {
-    font-family: 'Dancing Script', cursive;
-    color: #bf8c4d;
-    margin-bottom: 12px;
+.names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    line-height: 1;
+    color: #c69658;
+}
+
+.and {
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.1rem;
+    margin: 0 0.6rem;
+    vertical-align: middle;
+    color: #7f6c56;
+}
+
+.date-section {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 0.06em;
+    color: #6c584c;
+    margin-bottom: 0.4rem;
+}
+
+.month, .year {
+    font-weight: 400;
+    font-size: 1rem;
+    display: block;
+}
+
+.weekday {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #978067;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.1em;
+}
+
+.venue {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6f5e4e;
+    margin: 0 0 1.8rem;
+    line-height: 1.4;
 }
 
 #countdown {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #6e5a48;
+    background: #c8b699;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.8rem;
+    font-family: 'Cormorant Garamond', serif;
 }
 
-#countdown span {
-    min-width: 44px;
-    display: inline-block;
-    text-align: center;
+.countdown-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.12em;
+}
+
+.countdown-timer span {
+    margin: 0 0.3rem;
+    font-size: 1.4rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 12px;
+    height: 220px;
+    border: none;
 }
