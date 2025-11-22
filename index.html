@@ -1,53 +1,73 @@
-    <div class="date-section">
-        <span class="month">JANUARY</span>
-        <span class="day">28</span>
-        <span class="year">2026</span>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Invitation - Sreelekshmi & Ananthu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="invitation-card">
+    <p class="honour-text">
+      It would be our great honour to have your esteemed presence and blessings as we celebrate our big day
+    </p>
+
+    <h1 class="names">
+      Sreelekshmi <span class="and">and</span> Ananthu
+    </h1>
+
+    <div class="date-info">
+      <span class="month">JANUARY</span>
+      <span class="day">28</span>
+      <span class="year">2026</span>
     </div>
     <div class="weekday">WEDNESDAY</div>
-    <p class="venue">HIBAS Convention Center, Vallikunnam, Alappuzha.<br /> Muhurtham B/w 10:00 am &amp; 10:45 am</p>
+
+    <p class="venue">
+      HIBAS Convention Center,<br />
+      Vallikunnam, Alappuzha.<br />
+      Muhurtham B/w 10:00 am &amp; 10:45 am
+    </p>
 
     <div id="countdown"></div>
 
-    <!-- Google Map Embed -->
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.795214366434!2d76.45468721463618!3d9.278328492979746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05c499bac3f01d%3A0xfe028aacf0503ee7!2sHIBAS%20Convention%20Center!5e0!3m2!1sen!2sin!4v1701123456789!5m2!1sen!2sin" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</div>
-<script>
-    // Countdown script
+    <a class="venue-link" href="https://maps.app.goo.gl/srNmXtCH1z3Vttbr8?g_st=ipc" target="_blank" rel="noopener noreferrer" aria-label="Venue Location on Google Maps">
+      View Venue Location on Google Maps
+    </a>
+  </div>
+
+  <script>
     const countdownElement = document.getElementById('countdown');
     const eventDate = new Date('January 28, 2026 10:00:00').getTime();
 
     function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+      const now = new Date().getTime();
+      const diff = eventDate - now;
 
-        if (distance < 0) {
-            countdownElement.innerHTML = 'The day has arrived!';
-            return;
-        }
+      if (diff < 0) {
+        countdownElement.textContent = 'The day has arrived!';
+        return;
+      }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML =
-            `<div class="countdown-label">Countdown to Our Big Day</div>
-            <div class="countdown-timer">
-                <span>${days}d</span>
-                <span>${hours}h</span>
-                <span>${minutes}m</span>
-                <span>${seconds}s</span>
-            </div>`;
+      countdownElement.innerHTML = `
+        <span class="cd-label">Countdown to the Big Day</span>
+        <div class="cd-timer">
+          <span>${days}d</span>
+          <span>${hours}h</span>
+          <span>${minutes}m</span>
+          <span>${seconds}s</span>
+        </div>
+      `;
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
-</script>
+  </script>
+</body>
+</html>
